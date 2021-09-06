@@ -501,7 +501,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ## 4. Consideraciones generales
 
-Este proyecto se debe "resolver" de forma individual.
+Este proyecto se realizará en duos.
 
 Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja
 hasta la historia que puedas en el tiempo especificado.
@@ -516,11 +516,11 @@ La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde un
 _tablet_, pero **no queremos una app nativa**, sino una web app que sea
 **responsive** y pueda funcionar **offline**.
 
-Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
+Necesitamos pensar bien en el aspecto UX de quienes van a tomar los pedidos,
  el tamaño y aspecto de los botones, la visibilidad del estado actual del
  pedido, etc.
 
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
+La aplicación desplegada debe tener 80% o más en las puntuaciones de
 Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
 
 La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
@@ -532,7 +532,7 @@ _lines_ y _branches_.
 
 Este proyecto incluye un _boilerplate_ con el código necesario para arrancar con
 la parte de backend ya resuelta. El _boilerplate_ incluye los siguientes
-archivos/carpetas con la configuración de Fierbase (hosting y firestore):
+archivos/carpetas con la configuración de Firebase (hosting y firestore):
 
 ```text
 .
@@ -547,9 +547,9 @@ archivos/carpetas con la configuración de Fierbase (hosting y firestore):
 Por otro lado, la parte de la interfaz no está incluida, por lo que, deberás
 definir la estructura de carpetas y archivos que consideres necesaria. Puedes
 guiarte de las convenciones del _framework_ elegido. Por ende, los _tests_ y el
-_setup_ necesario para ejecutarlos, serán hechos por ti.
+_setup_ necesario para ejecutarlos, serán hechos por ustedes.
 
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
+Para comenzar este proyecto tendrán que hacer un _fork_ y _clonar_ este
 repositorio.
 
 ## 5. Criterios de aceptación mínimos del proyecto
@@ -570,7 +570,7 @@ que se puedan ir preparando en orden.
 
 ##### Criterios de aceptación
 
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
+Lo que debe ocurrir para que se satisfagan las necesidades del usuario.
 
 * Anotar nombre de cliente.
 * Agregar productos al pedido.
@@ -583,7 +583,7 @@ Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
 
 Lo acordado que debe ocurrir para decir que la historia está terminada.
 
-* Debes haber recibido _code review_ de al menos una compañera.
+* Debes haber recibido _code review_ de tu compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
@@ -605,7 +605,7 @@ que un pedido está listo para servirlo a un cliente.
 
 ##### Definición de terminado
 
-* Debes haber recibido _code review_ de al menos una compañera.
+* Debes haber recibido _code review_ de tu compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
@@ -624,7 +624,7 @@ rápidamente a los clientes que las hicieron.
 
 ##### Definición de terminado
 
-* Debes haber recibido _code review_ de al menos una compañera.
+* Debes haber recibido _code review_ de tu compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
@@ -704,7 +704,7 @@ Netlify, y Heroku.
 
 Netlify y Heroku son servicios para desplegar tu web app - backend y  
 frontend - y no son limitados a usar solamente con Firebase.  
-Por ejemplo, puedes desplegar un app MySQL/Express/React.
+Por ejemplo, puedes desplegar un app Express/React.
 
 #### Build para production
 
