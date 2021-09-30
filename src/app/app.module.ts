@@ -10,10 +10,14 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 // Components
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
+import { HomeHeaderComponent } from './components/home-header/home-header.component';
+import { HomeBodyComponent } from './components/home-body/home-body.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeHeaderComponent,
+    HomeBodyComponent
   ],
   imports: [
     BrowserModule,
