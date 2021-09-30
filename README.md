@@ -1,3 +1,31 @@
+# BurgerQueen
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 # Burger Queen
 
 ## Índice
@@ -693,17 +721,17 @@ podrán hacer sus propios _forks_ a partir del _fork_ principal de su equipo.
 
 ### Despliegue
 
-En esta sección revisamos algunas opciones para desplegar  
-el backend y frontend de tu app.  
-Si usas firebase con reglas de firestore, índices, cloud functions,  
+En esta sección revisamos algunas opciones para desplegar
+el backend y frontend de tu app.
+Si usas firebase con reglas de firestore, índices, cloud functions,
 necesitas desplegar el backend con firebase-cli.
 
-Puedes desplegar el frontend con Firebase hosting.  
-Hay otras opciones como Github Pages (que ya estan familiarizadas),  
+Puedes desplegar el frontend con Firebase hosting.
+Hay otras opciones como Github Pages (que ya estan familiarizadas),
 Netlify, y Heroku.
 
-Netlify y Heroku son servicios para desplegar tu web app - backend y  
-frontend - y no son limitados a usar solamente con Firebase.  
+Netlify y Heroku son servicios para desplegar tu web app - backend y
+frontend - y no son limitados a usar solamente con Firebase.
 Por ejemplo, puedes desplegar un app Express/React.
 
 #### Build para production
@@ -752,7 +780,7 @@ firebase deploy
 ##### Netlify
 
 [Netlify](http://netlify.com) es un servicio de hosting
-para sitios web estáticos.  
+para sitios web estáticos.
 Para usarlo primero necesitas crear una cuenta en
 [Netlify](http://netlify.com) y después puedes conectar tu repo.
 
