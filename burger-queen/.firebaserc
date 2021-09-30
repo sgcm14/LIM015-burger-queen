@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "burger-queen-ffe43": {
+      "hosting": {
+        "burger-queen": [
+          "burger-queen-ffe43"
+        ]
+      }
+    }
+  }
+}
