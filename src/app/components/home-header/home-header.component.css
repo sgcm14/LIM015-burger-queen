@@ -1,25 +1,40 @@
-.logo-home {
-  height: 40vh;
-}
-p {
-  color: white;
-  font-family: 'Stick No Bills', sans-serif;
+.navbar{
+  height: 15vh;
   background-color: #8A0300;
-  font-weight: 500;
-  font-size: 48px;
-}
-
-.container{
-  color: white;
-}
-.img-home {
-  height: 25vh;
-}
-
-.btnHome{
   color: white;
   font-family: 'Stick No Bills', sans-serif;
-  background-color: #FE9525;
-  font-weight: 500;
-  font-size: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.logo{
+  height: 15vh;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.fa-bars{
+  color: #FE9525;
+  font-size: 30px;
+}
+
+.navbar-nav{
+  align-items: center;
+  background-color: #8a1817;
+}
+a {
+  color: white;
+  font-family: 'Stick No Bills', sans-serif;
+  color: #FE9525;
+}
+.nav-link:hover{
+  color: #bb6100;
+}
+.navbar-expand-lg .navbar-collapse{
+  justify-content: flex-end;
 }

@@ -1,0 +1,28 @@
+.logo-home {
+  height: 40vh;
+}
+p {
+  color: white;
+  font-family: 'Stick No Bills', sans-serif;
+  background-color: #8A0300;
+  font-weight: 500;
+}
+
+.container{
+  color: white;
+}
+.img-home {
+  height: 25vh;
+}
+
+.btnHome{
+  color: white;
+  font-family: 'Stick No Bills', sans-serif;
+  background-color: #FE9525;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.btn-check:focus+.btn, .btn:focus{
+  box-shadow: 0 0 0 0.25rem #ffbf006b;
+}

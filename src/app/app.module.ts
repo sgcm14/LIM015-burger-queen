@@ -12,12 +12,16 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
 import { HomeBodyComponent } from './components/home-body/home-body.component';
+import { HomeFooterComponent } from './components/home-footer/home-footer.component';
+import { BookingComponent } from './components/booking/booking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeHeaderComponent,
-    HomeBodyComponent
+    HomeBodyComponent,
+    HomeFooterComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

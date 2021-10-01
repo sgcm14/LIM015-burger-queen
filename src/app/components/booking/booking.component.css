@@ -1,0 +1,32 @@
+.container{
+  margin-top: 12vh;
+  margin-bottom: 5rem;
+}
+
+.img-table{
+  height: 20vh;
+}
+p {
+  color: white;
+  font-family: 'Stick No Bills', sans-serif;
+  background-color: #FE9525;
+  font-weight: 500;
+}
+
+.btnBooking{
+  color: white;
+  font-family: 'Stick No Bills', sans-serif;
+  background-color: #FE9525;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.fa-reply{
+  color: white;
+}
+.fa-reply:hover{
+  color: rgb(194, 194, 194);
+}
+.btn:focus{
+  box-shadow: none;
+}
