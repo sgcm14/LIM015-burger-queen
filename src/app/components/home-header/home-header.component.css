@@ -25,7 +25,7 @@
 
 .navbar-nav{
   align-items: center;
-  background-color: #8a1817;
+  background-color: #8A0300;
 }
 a {
   color: white;
@@ -34,6 +34,9 @@ a {
 }
 .nav-link:hover{
   color: #bb6100;
+}
+.nav-link:focus, .nav-link:hover {
+  color: white;
 }
 .navbar-expand-lg .navbar-collapse{
   justify-content: flex-end;

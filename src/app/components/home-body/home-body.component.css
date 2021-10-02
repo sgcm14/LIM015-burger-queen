@@ -1,5 +1,10 @@
+.container{
+  margin-top: 5vh;
+  margin-bottom: 5rem;
+}
+
 .logo-home {
-  height: 40vh;
+  height: 30vh;
 }
 p {
   color: white;
