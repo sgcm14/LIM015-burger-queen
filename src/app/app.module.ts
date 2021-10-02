@@ -14,6 +14,7 @@ import { HomeHeaderComponent } from './components/home-header/home-header.compon
 import { HomeBodyComponent } from './components/home-body/home-body.component';
 import { HomeFooterComponent } from './components/home-footer/home-footer.component';
 import { BookingComponent } from './components/booking/booking.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BookingComponent } from './components/booking/booking.component';
     HomeHeaderComponent,
     HomeBodyComponent,
     HomeFooterComponent,
-    BookingComponent
+    BookingComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
