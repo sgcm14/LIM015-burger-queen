@@ -1,0 +1,53 @@
+.container{
+  margin-top: 3vh;
+}
+.title{
+  background-color: #FE9525;
+  font-weight: 500;
+  padding: 0;
+}
+
+p{
+  font-family: var(--font-main);
+  margin-bottom: 0;
+  margin: 0 0.5rem;
+}
+
+/* .btnMenu{
+  background-color: #FE9525;
+} */
+.btn:focus{
+  box-shadow: none;
+}
+.btn{
+  font-family: var(--font-main);
+  color: var(--color-white);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  width: 80% !important;
+}
+
+.btnMenu{
+  background-color: #FE9525;
+  font-size: 24px;
+}
+.btn:focus{
+  box-shadow: none;
+}
+
+.btnProceso{
+  background-color: #1CA10D;
+}
+.btnDespacho{
+  background-color: #FA4036;
+}
+
+.table-pendiente{
+  background-color: #8a02007c;
+  border: 10px solid #8A0300!important;
+}
+.table-listo{
+  background-color: #fe95257c;
+  border: 10px solid #FE9525!important;
+}
