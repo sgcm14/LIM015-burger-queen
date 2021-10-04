@@ -15,6 +15,7 @@ import { HomeBodyComponent } from './components/home-body/home-body.component';
 import { HomeFooterComponent } from './components/home-footer/home-footer.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { KitchenComponent } from './components/kitchen/kitchen.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MenuComponent } from './components/menu/menu.component';
     HomeBodyComponent,
     HomeFooterComponent,
     BookingComponent,
-    MenuComponent
+    MenuComponent,
+    KitchenComponent
   ],
   imports: [
     BrowserModule,

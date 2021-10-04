@@ -14,6 +14,9 @@ p {
     font-weight: 500;
     font-size: 24px;
 }
+.btn:focus{
+    box-shadow: none;
+}
 
 .table-menu{
     background-color: #8a02007c;
@@ -34,9 +37,15 @@ li{
     transform: rotate(-45deg);
 }
 
+.containerBotton{
+    align-items: flex-end;
+}
 .fa-reply{
     color: white;
 }
 .fa-reply:hover{
     color: rgb(194, 194, 194);
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0.25rem rgb(237 148 33 / 75%);
 }
