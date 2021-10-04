@@ -13,6 +13,9 @@ p{
   margin: 0 0.5rem;
 }
 
+.timer{
+  color: var(--color-white);
+}
 /* .btnMenu{
   background-color: #FE9525;
 } */
