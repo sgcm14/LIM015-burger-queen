@@ -1,4 +1,6 @@
+<!--menú-->
 <app-home-header></app-home-header>
+
 <div class="col-sm mt-2">
   <p class="text-end fs-1 timer">HORA 00:00:00</p>
 </div>
@@ -8,7 +10,7 @@
     <div class="col-lg mt-2 rounded-pill title mx-auto d-block">
       <p class="text-center fs-1">Pendiente</p>
     </div>
-    <ul class="list-group table-pendiente mt-2">
+    <ul class="list-group tablePending mt-2">
       <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
         Sandwich de jamón y queso
         <p>00:00:00</p>
@@ -25,7 +27,7 @@
     <div class="col-sm mt-2 rounded-pill title mx-auto d-block">
       <p class="text-center fs-1">Listo</p>
     </div>
-    <ul class="list-group table-listo mt-2">
+    <ul class="list-group tableReady mt-2">
       <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
         Sandwich de jamón y queso
         <span class="border border-secondary rounded">1</span>
@@ -38,10 +40,10 @@
   </div>
   <div class="col-sm">
     <div class="col mx-auto d-block text-center">
-      <button type="button" class="btnMenu btn mt-3 btnProceso">Proceso</button>
+      <button type="button" class="btnMenu btn mt-3 btnProcess">Proceso</button>
     </div>
     <div class="col mx-auto d-block text-center">
-      <button type="button" class="btnMenu btn mt-3 btnDespacho">Despacho</button>
+      <button type="button" class="btnMenu btn mt-3 btnDispatch">Despacho</button>
     </div>
     <div class="col mx-auto d-block text-center">
       <button type="button" class="btnMenu btn mt-3" routerLink="/orders">Órdenes</button>

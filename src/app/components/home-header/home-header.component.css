@@ -1,8 +1,8 @@
 .navbar{
   height: 15vh;
-  background-color: #8A0300;
-  color: white;
-  font-family: 'Stick No Bills', sans-serif;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-family: var(--font-main);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -18,25 +18,27 @@
 .navbar-toggler:focus{
   box-shadow: none;
 }
+
+/*barras menú*/
 .fa-bars{
-  color: #FE9525;
+  color: var(--color-orange);
   font-size: 30px;
 }
 
 .navbar-nav{
   align-items: center;
-  background-color: #8A0300;
+  background-color: var(--color-red);
 }
 a {
   color: white;
-  font-family: 'Stick No Bills', sans-serif;
-  color: #FE9525;
+  font-family: var(--font-main);
+  color: var(--color-orange);
 }
 .nav-link:hover{
   color: #bb6100;
 }
 .nav-link:focus, .nav-link:hover {
-  color: white;
+  color: var(--color-white);
 }
 .navbar-expand-lg .navbar-collapse{
   justify-content: flex-end;

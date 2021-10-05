@@ -1,5 +1,5 @@
 footer{
-  color: white;
-  font-family: 'Stick No Bills', sans-serif;
-  background-color: #8A0300;
+  color: var(--color-white);
+  font-family: var(--font-main);
+  background-color: var(--color-red);
 }

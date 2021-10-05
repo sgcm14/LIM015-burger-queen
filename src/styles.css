@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
   --color-white: white;
+  --color-orange: #FE9525;
+  --color-red: #8A0300;
   --font-main: 'Stick No Bills', sans-serif;
 }
 
