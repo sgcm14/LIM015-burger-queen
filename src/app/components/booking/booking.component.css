@@ -3,26 +3,27 @@
   margin-bottom: 5rem;
 }
 
-.img-table{
+/*Mesas img*/
+.imgTable{
   height: 15vh;
 }
-p {
-  color: white;
-  font-family: 'Stick No Bills', sans-serif;
-  background-color: #FE9525;
-  font-weight: 500;
-}
 
+/*botones*/
 .btnBooking{
-  color: white;
-  font-family: 'Stick No Bills', sans-serif;
-  background-color: #FE9525;
+  color: var(--color-white);
+  font-family: var(--font-main);
+  background-color: var(--color-orange);
   font-weight: 500;
   font-size: 24px;
 }
 
+/*Mesas btns*/
+.btns{
+  width: 100% !important;
+}
+
 .fa-reply{
-  color: white;
+  color: var(--color-white);
 }
 .fa-reply:hover{
   color: rgb(194, 194, 194);

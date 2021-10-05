@@ -3,7 +3,7 @@
 }
 
 .titleOrange{
-    color: #FE9525;
+    color: var(--color-orange);
     font-weight: 500;
     padding: 0;
 }
@@ -40,12 +40,12 @@ p{
     color: var(--color-white);
 }
 
-.table-listo{
+.tableReady{
     /* background-color: #8a02007c; */
-    border: 10px solid #8A0300!important;
+    border: 10px solid var(--color-red)!important;
     padding: 0px;
 }
-  .table-porServir, .table-servido{
+.tablePending, .tableDone{
     background-color: #fe95257c;
-    border: 10px solid #FE9525!important;
+    border: 10px solid var(--color-orange)!important;
 }

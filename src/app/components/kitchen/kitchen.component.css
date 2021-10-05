@@ -1,11 +1,14 @@
 .container{
   margin-top: 3vh;
 }
+
+/*pendiente, listo*/
 .title{
-  background-color: #FE9525;
+  background-color: var(--color-orange);
   font-weight: 500;
   padding: 0;
 }
+
 
 p{
   font-family: var(--font-main);
@@ -16,9 +19,7 @@ p{
 .timer{
   color: var(--color-white);
 }
-/* .btnMenu{
-  background-color: #FE9525;
-} */
+
 .btn:focus{
   box-shadow: none;
 }
@@ -32,25 +33,25 @@ p{
 }
 
 .btnMenu{
-  background-color: #FE9525;
+  background-color: var(--color-orange);
   font-size: 24px;
 }
 .btn:focus{
   box-shadow: none;
 }
 
-.btnProceso{
+.btnProcess{
   background-color: #1CA10D;
 }
-.btnDespacho{
+.btnDispatch{
   background-color: #FA4036;
 }
 
-.table-pendiente{
+.tablePending{
   background-color: #8a02007c;
-  border: 10px solid #8A0300!important;
+  border: 10px solid var(--color-red) !important;
 }
-.table-listo{
+.tableReady{
   background-color: #fe95257c;
-  border: 10px solid #FE9525!important;
+  border: 10px solid var(--color-orange) !important;
 }
