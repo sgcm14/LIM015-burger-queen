@@ -7,17 +7,17 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'burger-queen';
+export class AppComponent {
+  // title = 'burger-queen';
 
-  items: Observable<any[]>;
-  constructor(firestore: AngularFirestore) {
-    // this.items = firestore.collection('productos').valueChanges();
-    this.items = firestore.collection('mesas').valueChanges();
-  }
+  // items: Observable<any[]>;
+  // constructor(firestore: AngularFirestore) {
+  //   // this.items = firestore.collection('productos').valueChanges();
+  //   this.items = firestore.collection('mesas').valueChanges();
+  // }
 
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-  }
+  // ngOnInit(): void {
+  //   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //   //Add 'implements OnInit' to the class.
+  // }
 }
