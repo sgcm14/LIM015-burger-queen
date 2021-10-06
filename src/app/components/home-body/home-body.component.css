@@ -22,12 +22,18 @@ p {
 }
 
 /*botones*/
+.btnIcon{
+  background-color: #26221D;
+}
 .btnHome{
   color: var(--color-white);
   font-family: var(--font-main);
   background-color: var(--color-orange);
   font-weight: 500;
   font-size: 24px;
+}
+.btnOrder{
+  background-color: var(--color-red);
 }
 
 .btn-check:focus+.btn, .btn:focus{

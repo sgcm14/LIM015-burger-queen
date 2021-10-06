@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
 
   items: Observable<any[]>;
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('productos').valueChanges();
+    // this.items = firestore.collection('productos').valueChanges();
+    this.items = firestore.collection('mesas').valueChanges();
   }
 
   ngOnInit(): void {
