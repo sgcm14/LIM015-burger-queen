@@ -17,6 +17,7 @@ import { BookingComponent } from './components/booking/booking.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { ButtonsTablesComponent } from './components/buttons-tables/buttons-tables.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { OrdersComponent } from './components/orders/orders.component';
     BookingComponent,
     MenuComponent,
     KitchenComponent,
-    OrdersComponent
+    OrdersComponent,
+    ButtonsTablesComponent
   ],
   imports: [
     BrowserModule,

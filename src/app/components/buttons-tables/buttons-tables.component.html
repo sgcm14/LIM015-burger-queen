@@ -1,0 +1,13 @@
+<button type="button" class="btnTable" (click)="show=!show"> <!--routerLink="/menu"-->
+  <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="show">
+  <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="!show">
+  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns" *ngIf="show"> {{ tableName }}</p>
+  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns btnRed" *ngIf="!show"> {{ tableName }}</p>
+</button>
+
+<!-- <button type="button" class="btnTable" (click)="{{tableStatus}}">
+  <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf={{tableStatus}}>
+  <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf={{tableStatus}}>
+  <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns" *ngIf={{tableStatus}}> {{tableName}} </p>
+  <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns btnRed" *ngIf={{tableStatus}}> {{tableName}} </p>
+</button> -->
