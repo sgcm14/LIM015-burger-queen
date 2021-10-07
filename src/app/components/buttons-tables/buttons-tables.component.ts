@@ -8,15 +8,15 @@ import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
 })
 export class ButtonsTablesComponent implements OnInit {
   @Input() tableName: string | undefined;
-  show:boolean=true;
-
-  // @Input() tableStatus:boolean =false;
+  //show:boolean=false;
+  @Input() tableStatus:boolean | undefined;
+  
 
 
   constructor() { }
 
   ngOnInit(): void {
-
+    console.log(this.tableStatus);
   }
 
 
