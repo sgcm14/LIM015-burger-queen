@@ -1,4 +1,4 @@
-<button type="button" class="btnTable" (click)="tableStatus=!tableStatus"> <!--routerLink="/menu"-->
+<button type="button" class="btnTable" (click)="tableStatus=!tableStatus; updateStatusTable()" routerLink="/menu">
   <!--Mesa desocupada-->
   <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="!tableStatus">
   <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns" *ngIf="!tableStatus"> {{ tableName }}</p>
