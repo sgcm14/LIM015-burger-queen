@@ -7,11 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class BurgerQueenDBService {
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore) {
+  }
 
   // Trae la colección de Mesas FB
   getTables(): Observable<any> {
     return this.firestore.collection('mesas').snapshotChanges();
+  }
+
+  updateTable(id: string, status:Object){
+    return this.firestore.collection('mesas').doc(id).update(status);
   }
 }
 /*
