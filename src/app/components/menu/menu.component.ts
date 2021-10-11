@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
   // Trae elementos del menú que coinciden con tipo Desayuno
   getBreakfastItem() {
     this.getProducts();
-    console.log(this.products.filter((item) => item.tipo == 'desayuno'));
+    return this.products.filter((item) => item.tipo == 'desayuno');
   }
 
 }

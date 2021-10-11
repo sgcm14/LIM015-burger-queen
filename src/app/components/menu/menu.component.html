@@ -21,7 +21,7 @@
           <button class="itemsIcons"><i class="fas fa-plus-circle"></i></button>
         </li> -->
 
-        <app-template-products *ngFor="let product of products" [productName]="product.nombre" [productPrice]="product.precio" [productType]="product.tipo" ></app-template-products>
+        <app-template-products *ngFor="let product of getBreakfastItem()" [productName]="product.nombre" [productPrice]="product.precio" [productType]="product.tipo" ></app-template-products>
         <!-- <li class="list-group-item d-flex justify-content-between align-items-center rounded mt-1 mb-1">
           Cras justo odio
           <button class="itemsIcons"><i class="fas fa-plus-circle"></i></button>
