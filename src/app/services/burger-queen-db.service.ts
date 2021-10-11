@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,24 @@ export class BurgerQueenDBService {
   getTables(): Observable<any> {
     return this.firestore.collection('mesas').snapshotChanges();
   }
-
+  // Actualiza el status de las mesas
   updateTable(id: string, status:Object){
     return this.firestore.collection('mesas').doc(id).update(status);
   }
+
+  // Trae la colección de Productos FB
+  getProducts(): Observable<any> {
+    return this.firestore.collection('productos').snapshotChanges();
+  }
+
+  // prueba(){
+  //   const tipo$ = new Subject<string>();
+  // const queryObservable = tipo$.pipe(
+  // switchMap((tipo: any) =>
+  //   this.firestore.collection('items', ref => ref.where('desayuno', '==', tipo)).valueChanges()
+  // )
+  // );
+  // }
 }
 /*
 export class AppComponent implements OnInit {

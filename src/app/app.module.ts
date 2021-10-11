@@ -18,6 +18,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ButtonsTablesComponent } from './components/buttons-tables/buttons-tables.component';
+import { TemplateProductsComponent } from './components/template-products/template-products.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ButtonsTablesComponent } from './components/buttons-tables/buttons-tabl
     MenuComponent,
     KitchenComponent,
     OrdersComponent,
-    ButtonsTablesComponent
+    ButtonsTablesComponent,
+    TemplateProductsComponent
   ],
   imports: [
     BrowserModule,
