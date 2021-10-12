@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
+import { ShareDataService } from 'src/app/services/share-data.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,19 +9,22 @@ import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
 })
 export class MenuComponent implements OnInit {
   products: any[] = [];
-  // breakfast: any[] = [];
+  menuType: string =  'desayuno';
+  message:string = '';
 
-  constructor(private _productsService: BurgerQueenDBService) {
+  constructor(private service: BurgerQueenDBService, // DB de Firebase
+              private shareData: ShareDataService) { // Servicio para compartir información
   }
-
+ // Ejecuta funciones al cargar vista
   ngOnInit() {
-    // (this.getProducts());
-    (this.getBreakfastItem())
+    this.getBreakfastItem();
+
+    this.shareData.sharedMessage.subscribe(message => this.message = message) // trae la data message del servicio
   }
 
   // Trae el listado de productos
   getProducts() {
-    this._productsService.getProducts().subscribe((data: any[]) => {
+    this.service.getProducts().subscribe((data: any[]) => {
       this.products = [];
       data.forEach((element:any) => {
         this.products.push({
@@ -36,7 +40,14 @@ export class MenuComponent implements OnInit {
   // Trae elementos del menú que coinciden con tipo Desayuno
   getBreakfastItem() {
     this.getProducts();
-    return this.products.filter((item) => item.tipo == 'desayuno');
+    if (this.menuType==='desayuno'){
+      return this.products.filter((item) => item.tipo == 'desayuno');
+    }
+    else return this.products.filter((item) => item.tipo == 'menu');
+  }
+  // cambia estado de menu a mostrar(cambio de estado)
+  changeTypeMenu(type: string){
+    this.menuType = type;
   }
 
 }

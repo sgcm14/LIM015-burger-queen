@@ -4,13 +4,15 @@
 <div class="container">
   <div class="row mx-auto">
     <div class="col-sm mt-2">
-      <button type="button" class="btnMenu btn rounded-pill fs-5 col-6  mx-auto d-block" (click)="getBreakfastItem()">Desayuno</button> <!-- -->
+      <button type="button" class="btnMenu btn rounded-pill fs-5 col-6  mx-auto d-block" (click)="changeTypeMenu('desayuno')">Desayuno</button> <!-- -->
     </div>
     <div class="col-sm mt-2">
-      <button type="button" class="btnMenu btn rounded-pill fs-5 col-6  mx-auto d-block">Menú</button>
+      <button type="button" class="btnMenu btn rounded-pill fs-5 col-6  mx-auto d-block" (click)="changeTypeMenu('menu')">Menú</button>
     </div>
     <div class="col-sm mt-2">
-      <p class="text-center fs-1">Mesa #2</p>
+      <p class="text-center fs-1">#</p>
+      <h1>Message from Service : {{message}}</h1>
+      <!--{{auxilio}} [(ngModel)]="saveTableName" #desespero [innerHTML]="auxilio?.htmlcontent" {{ help() }} *ngIf="auxilio"-->
     </div>
   </div>
   <div class="row  mx-auto">

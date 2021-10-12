@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
-// import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
@@ -9,14 +9,14 @@ import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
 export class BookingComponent implements OnInit {
   tables: any[] = [];
 
-  constructor(private _bookingService: BurgerQueenDBService) { }
+  constructor(private service: BurgerQueenDBService) { }
 
   ngOnInit(): void {
     this.getTables();
   }
 
   getTables() {
-    this._bookingService.getTables().subscribe(data => {
+    this.service.getTables().subscribe(data => {
       this.tables = [];
       data.forEach((element:any) => { // Se puede usar map para recorrer
         // console.log(element.payload.doc.id); // trae colección por ID
@@ -26,7 +26,7 @@ export class BookingComponent implements OnInit {
           ...element.payload.doc.data()
         })
       });
-      console.log(this.tables); // imprime data completa con las propiedades de FS
+      // console.log(this.tables); // imprime data completa con las propiedades de FS
     });
   }
 

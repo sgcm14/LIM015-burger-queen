@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
+import { ShareDataService } from 'src/app/services/share-data.service';
 
 @Component({
   selector: 'app-buttons-tables',
@@ -8,15 +9,19 @@ import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
 })
 export class ButtonsTablesComponent implements OnInit {
   //traen los datos de booking.component.html
-  @Input() tableName: string | undefined;
+  @Input() tableName: string = '';
   @Input() tableStatus:boolean | any;
   @Input() tableId: number | any;
-  //show:boolean=false;
+  message:string = '';
 
-  constructor(private service: BurgerQueenDBService) { }
+  constructor(private service: BurgerQueenDBService,
+              private shareData: ShareDataService) { }
 
   ngOnInit(): void {
     console.log(this.tableStatus); //quitar despues
+    console.log(this.tableName);
+    this.shareData.sharedMessage.subscribe(message => this.message = message)
+
   }
 
   updateStatusTable(){
@@ -26,5 +31,8 @@ export class ButtonsTablesComponent implements OnInit {
     this.service.updateTable(idTable,objTable);
   }
 
-
+  // envía información a ser transmitida desde el botón de Mesa
+  newMessage() {
+    this.shareData.nextMessage(this.tableName)
+  }
 }
