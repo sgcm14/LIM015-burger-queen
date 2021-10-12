@@ -12,7 +12,7 @@ export class ButtonsTablesComponent implements OnInit {
   @Input() tableName: string = '';
   @Input() tableStatus:boolean | any;
   @Input() tableId: number | any;
-  message:string = '';
+  selectedTable:string = '';
 
   constructor(private service: BurgerQueenDBService,
               private shareData: ShareDataService) { }
@@ -20,7 +20,7 @@ export class ButtonsTablesComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.tableStatus); //quitar despues
     console.log(this.tableName);
-    this.shareData.sharedMessage.subscribe(message => this.message = message)
+    this.shareData.sharedMessage.subscribe(message => this.selectedTable = message)
 
   }
 
@@ -32,7 +32,7 @@ export class ButtonsTablesComponent implements OnInit {
   }
 
   // envía información a ser transmitida desde el botón de Mesa
-  newMessage() {
+  sendSelectedTable() {
     this.shareData.nextMessage(this.tableName)
   }
 }

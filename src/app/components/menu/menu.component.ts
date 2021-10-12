@@ -10,7 +10,7 @@ import { ShareDataService } from 'src/app/services/share-data.service';
 export class MenuComponent implements OnInit {
   products: any[] = [];
   menuType: string =  'desayuno';
-  message:string = '';
+  selectedTable:string = '';
 
   constructor(private service: BurgerQueenDBService, // DB de Firebase
               private shareData: ShareDataService) { // Servicio para compartir información
@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.getBreakfastItem();
 
-    this.shareData.sharedMessage.subscribe(message => this.message = message) // trae la data message del servicio
+    this.shareData.sharedMessage.subscribe(message => this.selectedTable = message) // trae la data message del servicio
   }
 
   // Trae el listado de productos

@@ -4,11 +4,6 @@
 <div class="container">
   <div class="row">
     <div class="col text-center" *ngFor="let table of tables | slice:0:3;"> <!-- Slice limita la cantidad de resultados -->
-      <!-- <button type="button" class="btnTable" routerLink="/menu">
-        <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
-        <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3">
-        <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns"> {{ table.name }}</p>
-      </button> -->
       <app-buttons-tables [tableName]="table.name" [tableStatus]="table.status" [tableId]="table.id"></app-buttons-tables>
     </div>
   </div>
@@ -17,40 +12,6 @@
       <app-buttons-tables [tableName]="table.name" [tableStatus]="table.status" [tableId]="table.id"></app-buttons-tables>
     </div>
   </div>
-    <!-- <div class="col text-center">
-      <button type="button" class="btnTable" routerLink="/menu">
-        <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
-        <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns"> Mesa #2</p>
-      </button>
-    </div>
-    <div class="col text-center">
-      <button type="button" class="btnTable" routerLink="/menu">
-        <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
-        <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns"> Mesa #3</p>
-      </button>
-    </div> -->
-
-    <!-- <div class="row">
-      <div class="col text-center" *ngFor="let table of tables | slice:3;">
-        <button type="button" class="btnTable" routerLink="/menu">
-          <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
-          <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns">{{ table.name }}</p>
-        </button>
-      </div> -->
-      <!-- <div class="col text-center">
-        <button type="button" class="btnTable" routerLink="/menu">
-          <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
-          <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns"> Mesa #5</p>
-        </button>
-      </div>
-      <div class="col text-center">
-        <button type="button" class="btnTable" routerLink="/menu">
-          <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
-          <p class="rounded-pill text-center mt-3 fs-3 btnBooking btns"> Mesa #6</p>
-        </button>
-      </div>
-    </div>
-  </div> -->
 
   <div class="row mt-5">
     <div class="col">
@@ -58,7 +19,7 @@
           class="fas fa-reply fs-1"></i></button>
     </div>
     <div class="col">
-      <button type="button" class="btnBooking btn col-6 mx-auto d-block mt-3" routerLink="/menu">Ver Carta</button>
+      <!-- <button type="button" class="btnBooking btn col-6 mx-auto d-block mt-3" routerLink="/menu">Ver Carta</button> -->
     </div>
   </div>
 </div>

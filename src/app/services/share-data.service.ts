@@ -6,13 +6,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ShareDataService {
 
-  private message = new BehaviorSubject('');
-  sharedMessage = this.message.asObservable();
+  private selectedTable = new BehaviorSubject('');
+  sharedMessage = this.selectedTable.asObservable();
 
   constructor() { }
 
   nextMessage(message: string) {
-    this.message.next(message)
+    this.selectedTable.next(message)
   }
 
 }
