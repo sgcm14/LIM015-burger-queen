@@ -3,10 +3,10 @@
 <div class="container">
   <div class="row mx-auto">
     <div class="col-sm mt-2">
-      <button type="button" class="btnMenu btn rounded-pill fs-5 col-6  mx-auto d-block" (click)="changeTypeMenu('desayuno')">Desayuno</button> <!-- -->
+      <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block" (click)="changeTypeMenu('desayuno')">Desayuno</button> <!-- -->
     </div>
     <div class="col-sm mt-2">
-      <button type="button" class="btnMenu btn rounded-pill fs-5 col-6  mx-auto d-block" (click)="changeTypeMenu('menu')">Menú</button>
+      <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block" (click)="changeTypeMenu('menu')">Menú</button>
     </div>
     <div class="col-sm mt-2">
       <p class="text-center fs-1">{{selectedTable}}</p>
@@ -21,13 +21,13 @@
     </div>
     <div class="col-sm">
       <ul class="list-group tableOrder">
-        <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
+        <li class="list-group-item mt-1 mb-1"> <!-- d-flex justify-content-between align-items-center -->
           <!-- <span class="col-sm text-center"> Sandwich de jamón y queso </span> -->
           <app-counter-input></app-counter-input>
           <!-- <span class="col-sm text-center">costo Total</span> -->
           <!-- <button class="itemsIcons"><i class="fas fa-plus-circle rotate"></i></button> -->
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
+        <li class="list-group-item mt-1 mb-1"> <!-- d-flex justify-content-between align-items-center -->
           <app-counter-input></app-counter-input>
         </li>
       </ul>
@@ -42,7 +42,7 @@
       <input type="text" placeholder="Cliente: _______________________" class="form-control" />
     </div>
     <div class="col">
-      <button type="button" class="btnMenu btn col-6 mx-auto d-block mt-3" routerLink="/orders">Ordenar</button>
+      <button type="button" class="btnMenu btn-lg btn col-6 mx-auto d-block mt-3" routerLink="/orders">Ordenar</button>
     </div>
   </div>
 </div>

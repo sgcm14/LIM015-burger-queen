@@ -8,3 +8,7 @@
 p{
     margin: 0px;
 }
+.containerProduct{
+    display: flex;
+    justify-content: space-between;
+}
