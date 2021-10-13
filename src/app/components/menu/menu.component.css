@@ -18,6 +18,10 @@ p {
     font-weight: 500;
     font-size: 24px;
 }
+.btnColor{
+    /* background-color: #FA4036 !important; */
+    background-color: var(--color-red) !important;
+}
 
 .btn:focus{
     box-shadow: none;
