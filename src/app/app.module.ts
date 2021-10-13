@@ -19,6 +19,7 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ButtonsTablesComponent } from './components/buttons-tables/buttons-tables.component';
 import { TemplateProductsComponent } from './components/template-products/template-products.component';
+import { CounterInputComponent } from './components/counter-input/counter-input.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TemplateProductsComponent } from './components/template-products/templa
     KitchenComponent,
     OrdersComponent,
     ButtonsTablesComponent,
-    TemplateProductsComponent
+    TemplateProductsComponent,
+    CounterInputComponent
   ],
   imports: [
     BrowserModule,

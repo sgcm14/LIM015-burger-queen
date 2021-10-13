@@ -2,3 +2,9 @@
     background-color: transparent;
     border: 1px solid transparent;
 }
+.rotate{
+    transform: rotate(-45deg);
+}
+p{
+    margin: 0px;
+}
