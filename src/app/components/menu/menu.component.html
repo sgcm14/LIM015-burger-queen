@@ -16,7 +16,7 @@
   <div class="row  mx-auto">
     <div class="col-sm">
       <ul class="list-group tableMenu mb-2" >
-        <app-template-products *ngFor="let product of getBreakfastItem()" [productName]="product.nombre" [productPrice]="product.precio" [productType]="product.tipo" ></app-template-products>
+        <app-template-products *ngFor="let product of productsFilter" [productName]="product.nombre" [productPrice]="product.precio" [productType]="product.tipo" ></app-template-products>
       </ul>
     </div>
     <div class="col-sm">
@@ -26,9 +26,6 @@
           <app-counter-input></app-counter-input>
           <!-- <span class="col-sm text-center">costo Total</span> -->
           <!-- <button class="itemsIcons"><i class="fas fa-plus-circle rotate"></i></button> -->
-        </li>
-        <li class="list-group-item mt-1 mb-1"> <!-- d-flex justify-content-between align-items-center -->
-          <app-counter-input></app-counter-input>
         </li>
       </ul>
     </div>
