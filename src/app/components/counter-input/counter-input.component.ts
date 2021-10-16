@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ShareDataService } from 'src/app/services/share-data.service';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-counter-input',
@@ -7,19 +6,12 @@ import { ShareDataService } from 'src/app/services/share-data.service';
   styleUrls: ['./counter-input.component.css']
 })
 export class CounterInputComponent implements OnInit {
-  // infoProduct: string= '';
-  // infoPrice: number | any;
-  infoProduct: any[] = [];
-  productList: any[] = [];
+  @Input () itemName: string | any;
+  @Input () itemPrice: number | any;
 
-  constructor(private shareData: ShareDataService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    // this.shareData.getProduct.subscribe(message => this.infoProduct = message) // trae la data message del servicio
-    // console.log(this.infoProduct);
-    this.shareData.getProduct.subscribe(message => this.productList = message) // trae la data message del servicio
-    console.log(this.productList);
-  }
+  ngOnInit(): void {  }
 
   quantity:number=1;
   i=1;

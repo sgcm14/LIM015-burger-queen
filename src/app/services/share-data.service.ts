@@ -20,12 +20,6 @@ export class ShareDataService {
     this.selectedTable.next(message)
   }
 
-  // productOrder(message: Array<any>): void {
-  //   this.infoProduct.next(message)
-  // }
-  productOrder(message: Array<any>): void {
-    this.productList.next(message)
-  }
 
 }
 
