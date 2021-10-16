@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ShareDataService } from 'src/app/services/share-data.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-template-products',
@@ -10,28 +10,15 @@ export class TemplateProductsComponent implements OnInit {
   @Input () productName: string | any;
   @Input () productPrice: number | any;
   @Input () productType: string | any;
-  infoProduct: string= '';
-  // infoProduct: any[] = [];
-  productList: any[] = [];
 
-  constructor(private shareData: ShareDataService) { }
+  product = this.cartService.getItems(); //trae la data del service del carrito
 
-  ngOnInit(): void {
-    // this.shareData.getProduct.subscribe(message => this.infoProduct = message) // trae la data message del servicio
+  constructor(private cartService: CartService) { }
 
-    this.shareData.getProduct.subscribe(message => this.productList = message) // trae la data message del servicio
-    // console.log(this.infoProduct);
+  ngOnInit(): void {    }
+
+  addToCart(product: any, price:any) {
+    this.cartService.addToCart(product,price);
   }
-  sendInfoProduct() { // de acá envío información
-    // this.shareData.productOrder(this.infoProduct=this.productName)
-    this.productList = [];
-    // this.productList.unshift({ //añade la info al principio
-      this.productList.push({
-      name: this.productName,
-      price: this.productPrice,
-      // ...this.productList
-    })
-    console.log(this.productList);
-    this.shareData.productOrder(this.productList)
-  }
+  
 }

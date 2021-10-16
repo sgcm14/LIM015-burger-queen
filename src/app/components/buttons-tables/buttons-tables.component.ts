@@ -18,8 +18,8 @@ export class ButtonsTablesComponent implements OnInit {
               private shareData: ShareDataService) { }
 
   ngOnInit(): void {
-    console.log(this.tableStatus); //quitar despues
-    console.log(this.tableName);
+    // console.log(this.tableStatus);
+    // console.log(this.tableName);
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message)
 
   }

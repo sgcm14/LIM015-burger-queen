@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
 import { ShareDataService } from 'src/app/services/share-data.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,15 +13,17 @@ export class MenuComponent implements OnInit {
   menuType: string =  'desayuno';
   selectedTable:string = '';
   productsFilter: any[] = []; // trae los productos filtrados para mostrar
+  items = this.cartService.getItems(); //trae los productos del carrito
 
   constructor(private service: BurgerQueenDBService, // DB de Firebase
-              private shareData: ShareDataService) { // Servicio para compartir información
+    private shareData: ShareDataService, // Servicio para compartir información
+    private cartService: CartService) {  //Servicio del Carrito
   }
  // Ejecuta funciones al cargar vista
   ngOnInit() {
     this.getProducts();
     // this.getBreakfastItem();
-
+     console.log(this.items); //el tímido
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message) // trae la data message del servicio
   }
 
