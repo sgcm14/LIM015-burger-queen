@@ -9,10 +9,6 @@ export class ShareDataService {
   private selectedTable = new BehaviorSubject('');
   sharedMessage = this.selectedTable.asObservable();
 
-  // private infoProduct = new BehaviorSubject(<Array <any>>[]); //Este trae la info del nombre
-  // getProduct = this.infoProduct.asObservable();
-  private productList = new BehaviorSubject(<Array <any>>[]); //Este trae la info del nombre
-  getProduct = this.productList.asObservable();
 
   constructor() { }
 
