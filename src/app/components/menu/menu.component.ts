@@ -9,22 +9,27 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+   //variables globales
   products: any[] = [];
   menuType: string =  'desayuno';
   selectedTable:string = '';
   productsFilter: any[] = []; // trae los productos filtrados para mostrar
-  items = this.cartService.getItems(); //trae los productos del carrito
+  itemsCart = this.cartService.getItems(); //trae los productos del carrito
 
   constructor(private service: BurgerQueenDBService, // DB de Firebase
     private shareData: ShareDataService, // Servicio para compartir información
-    private cartService: CartService) {  //Servicio del Carrito
+    private cartService: CartService) {  //Servicio del Carrito y Orden
   }
  // Ejecuta funciones al cargar vista
   ngOnInit() {
+    //se inicializan valores
     this.getProducts();
-    // this.getBreakfastItem();
-     console.log(this.items); //el tímido
+     console.log(this.itemsCart); //el tímido
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message) // trae la data message del servicio
+  }
+
+  getTotal() {
+    return this.cartService.getTotal();
   }
 
   // Trae el listado de productos
@@ -37,20 +42,18 @@ export class MenuComponent implements OnInit {
           ...element.payload.doc.data(),
         })
       });
-      // return this.products; // imprime data completa con las propiedades de FS
-      // console.log(this.products.filter((item) => item.tipo == 'desayuno'));
       this.productsFilter = this.getBreakfastItem();
     });
   }
 
   // Trae elementos del menú que coinciden con tipo Desayuno
   getBreakfastItem() {
-    // this.getProducts();
     if (this.menuType==='desayuno'){
       return this.products.filter((item) => item.tipo == 'desayuno');
     }
     else return this.products.filter((item) => item.tipo == 'menu');
   }
+  
   // cambia estado de menu a mostrar(cambio de estado)
   changeTypeMenu(type: string){
     this.menuType = type;
