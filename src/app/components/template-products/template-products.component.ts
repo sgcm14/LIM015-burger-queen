@@ -7,18 +7,26 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./template-products.component.css']
 })
 export class TemplateProductsComponent implements OnInit {
-  @Input () productName: string | any;
-  @Input () productPrice: number | any;
-  @Input () productType: string | any;
-
-  product = this.cartService.getItems(); //trae la data del service del carrito
+  @Input () product: any;
+  itemsCart = this.cartService.getItems();
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {    }
 
-  addToCart(product: any, price:any) {
-    this.cartService.addToCart(product,price);
+  addToCart(product: any) {
+      // agrega producto al carrito si está vacio 
+    if(this.itemsCart.length === 0) {
+      this.cartService.addToCart(product);
+    } else {
+        // agrega el producto si el id es diferente a los agregados
+      if(!this.itemsCart.find( (item: any) => item.id === product.id)) {
+        this.cartService.addToCart(product);
+        // si encuentra al id actualiza su cantidad 
+      } else {
+        this.cartService.updateCart(product,'+');
+      }
+    }
   }
   
 }
