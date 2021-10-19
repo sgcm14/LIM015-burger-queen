@@ -1,10 +1,10 @@
-<button type="button" class="btnTable" (click)="tableStatus=!tableStatus; updateStatusTable(); sendSelectedTable()" routerLink="/menu">
+<button type="button" class="btnTable" (click)="table.status=!table.status; updateStatusTable(); sendSelectedTable()" routerLink="/menu">
   <!--Mesa desocupada-->
-  <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="!tableStatus">
-  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns" *ngIf="!tableStatus"> {{ tableName }}</p>
+  <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="!table.status">
+  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns" *ngIf="!table.status"> {{ table.name }}</p>
   <!--Mesa ocupada-->
-  <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="tableStatus">
-  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns btnRed" *ngIf="tableStatus"> {{ tableName }}</p>
+  <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="table.status">
+  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns btnRed" *ngIf="table.status"> {{ table.name }}</p>
 </button>
 <!-- message contiene el nro de la mesa y lo envía
   <div>

@@ -21,13 +21,13 @@ export class MenuComponent implements OnInit {
     private shareData: ShareDataService, // Servicio para compartir información
     private cartService: CartService) {  //Servicio del Carrito y Orden
   }
- // Ejecuta funciones al cargar vista
+
+  // Ejecuta funciones al cargar vista
   ngOnInit() {
     //se inicializan valores
     this.getProducts();
      console.log(this.itemsCart); //el tímido
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message) // trae la data message del servicio
-    console.log(this.selectedTable);
   }
 
   getTotal() {
@@ -63,14 +63,20 @@ export class MenuComponent implements OnInit {
   }
 
   makeOrder() {
-    console.log(this.username);
-    console.log(this.itemsCart);
-    console.log(this.getTotal());
-    console.log(this.selectedTable);
+    const date = new Date();
+    const newDate = date.toString();
+    const saveOrder = {
+      cliente: this.username,
+      total: this.getTotal(),
+      mesa: this.selectedTable.name,
+      status: 0,
+      fecha: newDate,
+      detalle: this.itemsCart
+    }
     this.itemsCart = [];// limpia el contenido del carrito
     this.username = '';
-    // this.total = ''; Falta limpiar total
     this.selectedTable = '';
+    this.service.createOrder(saveOrder);
   }
 
   // Limpia el status de la mesa si vuelve a booking

@@ -4,12 +4,12 @@
 <div class="container">
   <div class="row">
     <div class="col text-center" *ngFor="let table of tables | slice:0:3;"> <!-- Slice limita la cantidad de resultados -->
-      <app-buttons-tables [table]="table" [tableName]="table.name" [tableStatus]="table.status" [tableId]="table.id"></app-buttons-tables>
+      <app-buttons-tables [table]="table"></app-buttons-tables>
     </div>
   </div>
   <div class="row">
     <div class="col text-center" *ngFor="let table of tables | slice:3;"> <!-- Slice limita la cantidad de resultados -->
-      <app-buttons-tables [table]="table" [tableName]="table.name" [tableStatus]="table.status" [tableId]="table.id"></app-buttons-tables>
+      <app-buttons-tables [table]="table"></app-buttons-tables>
     </div>
   </div>
 

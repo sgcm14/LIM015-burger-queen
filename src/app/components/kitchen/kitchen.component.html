@@ -13,8 +13,8 @@
     <ul class="list-group tablePending mt-2" *ngFor="let orderClient of order">
       <!-- Hacer *ngIf si el estado del detalle es pendiente cuando iteramos el detalle -->
       <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1" *ngFor='let item of orderClient.detalle'>
-        {{item.nombre}}
-        <p>{{time | date:'h:mm:ss a'}}</p> <!-- | date : 'yyyy-MM-dd HH:mm:ss {{orderClient.mesa}}-->
+        <p class="w-50 fs-5"> {{item.nombre}} </p>
+        <p class="w-25 text-end">{{orderClient.fecha | date: 'shortTime'}}</p> <!-- | date : 'yyyy-MM-dd HH:mm:ss {{orderClient.mesa}}-->
         <span class="border border-secondary rounded text-center"> {{item.cantidad}} </span>
       </li>
       <!-- <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
