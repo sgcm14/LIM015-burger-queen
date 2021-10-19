@@ -29,4 +29,7 @@ export class BurgerQueenDBService {
       return this.firestore.collection('pedido').snapshotChanges();
     }
 
+  createOrder(order: any){
+    return this.firestore.collection('pedido').add(order);
+  }
 }

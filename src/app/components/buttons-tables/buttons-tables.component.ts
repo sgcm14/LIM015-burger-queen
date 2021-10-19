@@ -10,24 +10,18 @@ import { ShareDataService } from 'src/app/services/share-data.service';
 export class ButtonsTablesComponent implements OnInit {
   //traen los datos de booking.component.html
   @Input() table: any;
-  @Input() tableName: string = '';
-  @Input() tableStatus:boolean | any;
-  @Input() tableId: number | any;
   selectedTable:any;
 
   constructor(private service: BurgerQueenDBService,
               private shareData: ShareDataService) { }
 
   ngOnInit(): void {
-    // console.log(this.tableStatus);
-    // console.log(this.tableName);
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message)
-
   }
 
   updateStatusTable(){
-    const idTable=this.tableId;
-    const statusTable=this.tableStatus;
+    const idTable=this.table.id;
+    const statusTable=this.table.status;
     const objTable = {status:statusTable};
     this.service.updateTable(idTable,objTable);
   }
