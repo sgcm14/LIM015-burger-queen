@@ -16,6 +16,10 @@ p{
   margin: 0 0.5rem;
 }
 
+span{
+  width: 10%;
+}
+
 .timer{
   color: var(--color-white);
 }

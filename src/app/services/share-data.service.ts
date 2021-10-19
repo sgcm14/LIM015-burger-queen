@@ -12,7 +12,7 @@ export class ShareDataService {
 
   constructor() { }
 
-  nextMessage(message: string) {
+  nextMessage(message: any) {
     this.selectedTable.next(message)
   }
 

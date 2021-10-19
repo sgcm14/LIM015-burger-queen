@@ -9,10 +9,11 @@ import { ShareDataService } from 'src/app/services/share-data.service';
 })
 export class ButtonsTablesComponent implements OnInit {
   //traen los datos de booking.component.html
+  @Input() table: any;
   @Input() tableName: string = '';
   @Input() tableStatus:boolean | any;
   @Input() tableId: number | any;
-  selectedTable:string = '';
+  selectedTable:any;
 
   constructor(private service: BurgerQueenDBService,
               private shareData: ShareDataService) { }
@@ -33,6 +34,7 @@ export class ButtonsTablesComponent implements OnInit {
 
   // envía información a ser transmitida desde el botón de Mesa
   sendSelectedTable() {
-    this.shareData.nextMessage(this.tableName)
+    // trae la data completa de la mesa y no solo el nombre
+    this.shareData.nextMessage(this.table)
   }
 }

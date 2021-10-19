@@ -17,12 +17,11 @@ export class CounterInputComponent implements OnInit {
 
   constructor(private cartService: CartService) {   }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
     //se inicializan valores
     //this.total = this.quantity * this.itemPrice;
-   }
+  }
 
-  
   plus(){
     if(this.i){
       this.i++;
@@ -44,5 +43,5 @@ export class CounterInputComponent implements OnInit {
   deleteItem(itemCart:any) {
     this.cartService.deleteItem(itemCart);
   }
-  
+
 }
