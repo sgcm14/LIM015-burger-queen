@@ -11,10 +11,11 @@ import { CartService } from '../../services/cart.service';
 export class MenuComponent implements OnInit {
    //variables globales
   products: any[] = [];
-  menuType: string =  'desayuno';
-  selectedTable:string = '';
   productsFilter: any[] = []; // trae los productos filtrados para mostrar
+  menuType: string =  'desayuno';
+  selectedTable:any;
   itemsCart = this.cartService.getItems(); //trae los productos del carrito
+  username: string = '';
 
   constructor(private service: BurgerQueenDBService, // DB de Firebase
     private shareData: ShareDataService, // Servicio para compartir información
@@ -26,6 +27,7 @@ export class MenuComponent implements OnInit {
     this.getProducts();
      console.log(this.itemsCart); //el tímido
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message) // trae la data message del servicio
+    console.log(this.selectedTable);
   }
 
   getTotal() {
@@ -53,11 +55,30 @@ export class MenuComponent implements OnInit {
     }
     else return this.products.filter((item) => item.tipo == 'menu');
   }
-  
+
   // cambia estado de menu a mostrar(cambio de estado)
   changeTypeMenu(type: string){
     this.menuType = type;
     this.productsFilter = this.getBreakfastItem();
+  }
+
+  makeOrder() {
+    console.log(this.username);
+    console.log(this.itemsCart);
+    console.log(this.getTotal());
+    console.log(this.selectedTable);
+    this.itemsCart = [];// limpia el contenido del carrito
+    this.username = '';
+    // this.total = ''; Falta limpiar total
+    this.selectedTable = '';
+  }
+
+  // Limpia el status de la mesa si vuelve a booking
+  clearTable() {
+    const idTable = this.selectedTable.id;
+    const objTable = {status:false};
+    this.service.updateTable(idTable,objTable);
+    // console.log(this.selectedTable);
   }
 
 }

@@ -20,6 +20,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { ButtonsTablesComponent } from './components/buttons-tables/buttons-tables.component';
 import { TemplateProductsComponent } from './components/template-products/template-products.component';
 import { CounterInputComponent } from './components/counter-input/counter-input.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CounterInputComponent } from './components/counter-input/counter-input.
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

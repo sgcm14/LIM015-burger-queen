@@ -2,39 +2,40 @@
 <app-home-header></app-home-header>
 
 <div class="col-sm mt-2">
-  <p class="text-end fs-1 timer">HORA 00:00:00</p>
+  <p class="text-end fs-1 timer">{{time | date:'h:mm:ss a'}}</p>
 </div>
 
 <div class="row  mx-auto container">
   <div class="col-lg">
-    <div class="col-lg mt-2 rounded-pill title mx-auto d-block">
+    <div class="col-lg mt-2 title mx-auto d-block">
       <p class="text-center fs-1">Pendiente</p>
     </div>
-    <ul class="list-group tablePending mt-2">
-      <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
+    <ul class="list-group tablePending mt-2" *ngFor="let orderClient of order">
+      <!-- Hacer *ngIf si el estado del detalle es pendiente cuando iteramos el detalle -->
+      <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1" *ngFor='let item of orderClient.detalle'>
+        {{item.nombre}}
+        <p>{{time | date:'h:mm:ss a'}}</p> <!-- | date : 'yyyy-MM-dd HH:mm:ss {{orderClient.mesa}}-->
+        <span class="border border-secondary rounded text-center"> {{item.cantidad}} </span>
+      </li>
+      <!-- <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
         Sandwich de jamón y queso
         <p>00:00:00</p>
         <span class="border border-secondary rounded">1</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
-        Sandwich de jamón y queso
-        <p>00:00:00</p>
-        <span class="border border-secondary rounded">1</span>
-      </li>
+      </li> -->
     </ul>
   </div>
   <div class="col-lg">
-    <div class="col-sm mt-2 rounded-pill title mx-auto d-block">
+    <div class="col-sm mt-2 title mx-auto d-block">
       <p class="text-center fs-1">Listo</p>
     </div>
     <ul class="list-group tableReady mt-2">
       <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
         Sandwich de jamón y queso
-        <span class="border border-secondary rounded">1</span>
+        <span class="border border-secondary rounded text-center">1</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
         Sandwich de jamón y queso
-        <span class="border border-secondary rounded">1</span>
+        <span class="border border-secondary rounded text-center">1</span>
       </li>
     </ul>
   </div>

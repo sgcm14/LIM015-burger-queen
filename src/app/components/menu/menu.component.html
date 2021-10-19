@@ -9,17 +9,17 @@
       <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block" (click)="changeTypeMenu('menu')">Menú</button>
     </div>
     <div class="col-sm mt-2">
-      <p class="text-center fs-1">{{selectedTable}}</p>
+      <p class="text-center fs-1">{{selectedTable.name}}</p>
     </div>
   </div>
   <div class="row  mx-auto">
     <div class="col-sm">
-      <ul class="list-group tableMenu mb-2" >
+      <ul class="list-group tableMenu mb-2 mt-2" >
         <app-template-products *ngFor="let product of productsFilter" [product] = "product"></app-template-products>
       </ul>
     </div>
     <div class="col-sm">
-      <ul class="list-group tableOrder">
+      <ul class="list-group tableOrder mt-2">
         <p class="text-center fs-3 mb-0 btnMenu">Pedido</p>
         <app-counter-input *ngFor="let item of itemsCart" [itemCart] = "item"> </app-counter-input>
       </ul>
@@ -28,14 +28,15 @@
   </div>
   <div class="row mt-5 containerBotton">
     <div class="col">
-      <button type="button" class="btn col-6 mx-auto d-block mt-3" routerLink="/booking"><i
-          class="fas fa-reply fs-1"></i></button>
+      <button type="button" class="btn col-6 mx-auto d-block mt-3" routerLink="/booking" (click)="clearTable()">
+        <i class="fas fa-reply fs-1"></i>
+      </button>
     </div>
     <div class="col">
-      <input type="text" placeholder="Cliente: _______________________" class="form-control" />
+      <input type="text" placeholder="Cliente: _______________________" class="form-control" [(ngModel)]="username"/>
     </div>
     <div class="col">
-      <button type="button" class="btnMenu btn-lg btn col-6 mx-auto d-block mt-3" routerLink="/orders">Ordenar</button>
+      <button type="button" class="btnMenu btn-lg btn col-6 mx-auto d-block mt-3" (click)="makeOrder()" routerLink="/orders">Ordenar</button>
     </div>
   </div>
 </div>
