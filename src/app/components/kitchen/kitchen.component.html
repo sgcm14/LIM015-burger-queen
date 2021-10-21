@@ -1,45 +1,52 @@
 <!--menú-->
 <app-home-header></app-home-header>
 
-<div class="col-sm mt-2">
+<section class="col-sm mt-2">
   <p class="text-end fs-1 timer">{{time | date:'h:mm:ss a'}}</p>
-</div>
+</section>
 
-<div class="row  mx-auto container">
-  <div class="col-lg">
+<section class="row  mx-auto container">
+
+  <section class="col-lg">
     <div class="col-lg mt-2 title mx-auto d-block">
       <p class="text-center fs-1">Pendiente</p>
     </div>
-    <ul class="list-group tablePending mt-2" *ngFor="let orderClient of order">
+    <section>
       <!-- Hacer *ngIf si el estado del detalle es pendiente cuando iteramos el detalle -->
-      <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1" *ngFor='let item of orderClient.detalle'>
-        <p class="w-50 fs-5"> {{item.nombre}} </p>
-        <p class="w-25 text-end">{{orderClient.fecha | date: 'shortTime'}}</p> <!-- | date : 'yyyy-MM-dd HH:mm:ss {{orderClient.mesa}}-->
-        <span class="border border-secondary rounded text-center"> {{item.cantidad}} </span>
-      </li>
-      <!-- <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
-        Sandwich de jamón y queso
-        <p>00:00:00</p>
-        <span class="border border-secondary rounded">1</span>
-      </li> -->
-    </ul>
-  </div>
-  <div class="col-lg">
+      <div cdkDropList [cdkDropListData]="order" class="example-list" (cdkDropListDropped)="drop($event)" #listOne="cdkDropList" [cdkDropListConnectedTo]="[listTwo]">
+        <ul class="list-group tablePending mt-2" *ngFor="let orderClient of order" cdkDrag>
+          <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1"
+            *ngFor='let item of orderClient.detalle'>
+            <p class="w-50 fs-5"> {{item.nombre}} </p>
+            <p class="w-25 text-end">{{orderClient.fecha | date: 'shortTime'}}</p>
+            <span class="border border-secondary rounded text-center"> {{item.cantidad}} </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <section class="col-lg">
     <div class="col-sm mt-2 title mx-auto d-block">
       <p class="text-center fs-1">Listo</p>
     </div>
-    <ul class="list-group tableReady mt-2">
-      <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
-        Sandwich de jamón y queso
-        <span class="border border-secondary rounded text-center">1</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
-        Sandwich de jamón y queso
-        <span class="border border-secondary rounded text-center">1</span>
-      </li>
-    </ul>
-  </div>
-  <div class="col-sm">
+    <section>
+      <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)"
+        #listTwo="cdkDropList" [cdkDropListConnectedTo]="[listOne]">
+        <ul class="list-group tablePending mt-2" *ngFor="let orderClient of done" cdkDrag>
+          <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1"
+            *ngFor='let item of orderClient.detalle'>
+            <p class="w-50 fs-5"> {{item.nombre}} </p>
+            <p class="w-25 text-end">{{orderClient.fecha | date: 'shortTime'}}</p>
+            <span class="border border-secondary rounded text-center"> {{item.cantidad}} </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+
+  <section class="col-sm">
     <div class="col mx-auto d-block text-center">
       <button type="button" class="btnMenu btn mt-3 btnProcess btn-lg fs-2">Proceso</button>
     </div>
@@ -49,5 +56,25 @@
     <div class="col mx-auto d-block text-center">
       <button type="button" class="btnMenu btn mt-3 btn-lg fs-2" routerLink="/orders">Órdenes</button>
     </div>
-  </div>
-</div>
+  </section>
+
+</section>
+
+<!-- ULs antes de drag and drop
+  LISTO
+  <ul class="list-group tablePending mt-2" *ngFor="let orderClient of order" cdkDropList (cdkDropListDropped)="drop($event)">
+    <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1" *ngFor='let item of orderClient.detalle' cdkDrag>
+      <p class="w-50 fs-5"> {{item.nombre}} </p>
+      <p class="w-25 text-end">{{orderClient.fecha | date: 'shortTime'}}</p>
+      <span class="border border-secondary rounded text-center"> {{item.cantidad}} </span>
+    </li>
+  </ul>
+
+  PENDIENTE
+  <ul class="list-group tableReady mt-2">
+    <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1">
+      Sandwich de jamón y queso
+      <span class="border border-secondary rounded text-center">1</span>
+    </li>
+  </ul>
+-->
