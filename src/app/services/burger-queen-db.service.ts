@@ -24,12 +24,18 @@ export class BurgerQueenDBService {
     return this.firestore.collection('productos').snapshotChanges();
   }
 
-    // Trae la colección de Pedidos FB
+  // Trae la colección de Pedidos FB
   getOrderKitchen(): Observable<any> {
       return this.firestore.collection('pedido').snapshotChanges();
     }
 
+  // Permite crear una orden y enviar a FB
   createOrder(order: any){
     return this.firestore.collection('pedido').add(order);
   }
+
+    // Actualiza el status del pedido
+    updateStatusOrder(id: string, status:Object){
+      return this.firestore.collection('pedido').doc(id).update(status);
+    }
 }

@@ -13,6 +13,8 @@ export class KitchenComponent implements OnInit {
   order:any[] = [];
   orderName: any;
   orderQuantity: any;
+  orderId: any;
+  orderStatus: any;
   done: any[] = [];
 
   // todo = [
@@ -47,30 +49,30 @@ export class KitchenComponent implements OnInit {
     this.service.getOrderKitchen().subscribe(data => {
       this.order = [];
       data.forEach((element:any) => {
-        // this.order = [];
-        this.order.push({
+        this.order = [...this.order, {
           id: element.payload.doc.id,
           ...element.payload.doc.data(),
-          // statusPrueba: 'pendiente',
-        })
+        }];
       });
-      console.log(this.order); // imprime data completa con las propiedades de FS
-      // console.log(this.order[1].detalle[0].nombre);
-      // console.log(this.order[1].detalle[0].cantidad);
-
       for (let j = 0; j < this.order.length; j++) {
-        // console.log(j);
+        this.orderId = this.order[j].id;
+        this.orderStatus = this.order[j].status;
         for (let k = 0; k < this.order[j].detalle.length; k++) {
           this.orderName += this.order[j].detalle[k].nombre;
-          // console.log(this.order[j].detalle[k].nombre);
           this.orderQuantity = this.order[j].detalle[k].cantidad;
-          // console.log(this.order[j].detalle[k].cantidad);
         }
       }
     });
   }
 
-  drop(event: CdkDragDrop<string[]>) {
+  getOrderPending() {
+    return this.order.filter((item) => item.status == 0);
+  }
+  getOrderDone() {
+    return this.order.filter((item) => item.status == 1);
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -78,13 +80,16 @@ export class KitchenComponent implements OnInit {
                         event.container.data,
                         event.previousIndex,
                         event.currentIndex);
-      // actualizar status de orden en firebase
+      this.orderId= event.container.data[event.currentIndex].id;
+        // console.log(this.orderId);
+      const objOrder = {status:1};
+      this.service.updateStatusOrder(this.orderId,objOrder);
+      this.getOrderDone();
+      if (this.orderStatus === 1) {
+        const objOrder = {status:0};
+        this.service.updateStatusOrder(this.orderId,objOrder);
+      }
     }
   }
-
-  // Actualizar status de pedido en FB
-  // prueba(orderStatus: string){
-  //   return orderStatus === 'pendiente';
-  // }
 
 }
