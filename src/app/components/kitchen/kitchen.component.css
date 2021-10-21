@@ -4,20 +4,30 @@
 
 /*pendiente, listo*/
 .title{
-  background-color: var(--color-orange);
+  background-color:  var(--color-red);
   font-weight: 500;
   padding: 0;
+  color: white;
+  font-family: var(--font-main);
+}
+.titleGreen{
+  background-color: #1CA10D;
 }
 
-
 p{
-  font-family: var(--font-main);
+  /* font-family: var(--font-main); */
   margin-bottom: 0;
   margin: 0 0.5rem;
 }
 
 span{
   width: 10%;
+}
+.spanRed{
+  border: 2px solid #8a02007c !important;
+}
+.spanGreen{
+  border: 2px solid #1CA10D !important;
 }
 
 li{
@@ -26,6 +36,7 @@ li{
 
 .timer{
   color: var(--color-white);
+  font-family: var(--font-main);
 }
 
 .btn:focus{
@@ -40,20 +51,20 @@ li{
   width: 80% !important;
 }
 
-.btnMenu{
+/* .btnMenu{
   background-color: var(--color-orange);
   font-size: 24px;
-}
+} */
 .btn:focus{
   box-shadow: none;
 }
 
-.btnProcess{
+/* .btnProcess{
   background-color: #1CA10D;
 }
 .btnDispatch{
   background-color: #FA4036;
-}
+} */
 
 .tablePending{
   background-color: #8a02007c;
@@ -61,8 +72,9 @@ li{
   cursor: move;
 }
 .tableReady{
-  background-color: #fe95257c;
-  border: 10px solid var(--color-orange) !important;
+  background-color: #106a068a;
+  border: 10px solid #1CA10D !important;
+  cursor: move;
 }
 
 .example-list {

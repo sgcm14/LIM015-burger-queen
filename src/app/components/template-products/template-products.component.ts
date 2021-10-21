@@ -15,18 +15,18 @@ export class TemplateProductsComponent implements OnInit {
   ngOnInit(): void {    }
 
   addToCart(product: any) {
-      // agrega producto al carrito si está vacio 
+      // agrega producto al carrito si está vacio
     if(this.itemsCart.length === 0) {
       this.cartService.addToCart(product);
     } else {
         // agrega el producto si el id es diferente a los agregados
       if(!this.itemsCart.find( (item: any) => item.id === product.id)) {
         this.cartService.addToCart(product);
-        // si encuentra al id actualiza su cantidad 
+        // si encuentra al id actualiza su cantidad
       } else {
         this.cartService.updateCart(product,'+');
       }
     }
   }
-  
+
 }
