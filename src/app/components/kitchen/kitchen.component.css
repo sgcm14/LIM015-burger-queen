@@ -20,6 +20,10 @@ span{
   width: 10%;
 }
 
+li{
+  user-select: none;
+}
+
 .timer{
   color: var(--color-white);
 }
@@ -54,8 +58,18 @@ span{
 .tablePending{
   background-color: #8a02007c;
   border: 10px solid var(--color-red) !important;
+  cursor: move;
 }
 .tableReady{
   background-color: #fe95257c;
   border: 10px solid var(--color-orange) !important;
+}
+
+.example-list {
+  /* border: solid 1px #ccc; */
+  min-height: 60px;
+  /* background: white; */
+  /* border-radius: 4px;
+  overflow: hidden;
+  display: block; */
 }
