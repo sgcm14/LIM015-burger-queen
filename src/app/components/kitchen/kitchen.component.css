@@ -4,18 +4,16 @@
 
 /*pendiente, listo*/
 .title{
-  background-color:  var(--color-red);
   font-weight: 500;
   padding: 0;
-  color: white;
+  color: #df2218;
   font-family: var(--font-main);
 }
 .titleGreen{
-  background-color: #1CA10D;
+  color: #1CA10D;
 }
 
 p{
-  /* font-family: var(--font-main); */
   margin-bottom: 0;
   margin: 0 0.5rem;
 }
