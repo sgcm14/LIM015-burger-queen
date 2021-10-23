@@ -38,4 +38,9 @@ export class BurgerQueenDBService {
     updateStatusOrder(id: string, status:Object){
       return this.firestore.collection('pedido').doc(id).update(status);
     }
+
+    // Actualiza el tiempo de preparación del pedido
+    updatePreparationTime(id: string, tiempo:Object){
+      return this.firestore.collection('pedido').doc(id).update(tiempo);
+    }
 }

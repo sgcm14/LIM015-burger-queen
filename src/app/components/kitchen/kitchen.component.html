@@ -18,7 +18,7 @@
           <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1"
             *ngFor='let item of orderClient.detalle'>
             <p class="w-50 fs-4"> {{item.nombre}} </p>
-            <p class="w-25 text-end fs-4">{{orderClient.fecha | date: 'shortTime'}}</p>
+            <p class="w-25 text-end fs-5">{{orderClient.fecha | date: 'shortTime'}}</p>
             <span class="border border-secondary rounded text-center fs-4 spanRed"> {{item.cantidad}} </span>
           </li>
         </ul>
@@ -36,8 +36,8 @@
           <li class="list-group-item d-flex justify-content-between align-items-center mt-1 mb-1"
             *ngFor='let item of orderClient.detalle'>
             <p class="w-50 fs-4"> {{item.nombre}} </p>
-            <p class="w-25 text-end fs-4">{{orderClient.fecha | date: 'shortTime'}}</p>
-            <span class="border border-secondary rounded text-center fs-4 spanGreen"> {{item.cantidad}} </span>
+            <p class="w-50 text-end fs-5">{{orderClient.tiempo}}</p>
+            <!-- <span class="border border-secondary rounded text-center fs-4 spanGreen"> {{item.cantidad}} </span> -->
           </li>
         </ul>
       </div>

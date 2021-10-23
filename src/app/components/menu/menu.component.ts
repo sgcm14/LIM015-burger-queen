@@ -69,9 +69,11 @@ export class MenuComponent implements OnInit {
       cliente: this.username,
       total: this.getTotal(),
       mesa: this.selectedTable.name,
+      mesaID: this.selectedTable.id,
       status: 0,
       fecha: newDate,
-      detalle: this.itemsCart
+      detalle: this.itemsCart,
+      tiempo: ''
     }
     this.itemsCart = [];// limpia el contenido del carrito
     this.username = '';
