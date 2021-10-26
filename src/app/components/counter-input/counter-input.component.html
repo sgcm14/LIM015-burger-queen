@@ -1,4 +1,4 @@
-<li class="list-group-item mt-1 mb-1">
+<li *ngIf="itemCart" class="list-group-item mt-1 mb-1">
     <div class="containerProduct">
         <p class="text-center w-10 fs-4"> {{itemCart.nombre}}   </p>
         <button class="itemsIcons w-10" (click)="deleteItem(itemCart)"><i class="fas fa-plus-circle rotate fs-5"></i></button>
