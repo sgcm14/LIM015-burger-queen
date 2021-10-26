@@ -9,7 +9,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, 
+        RouterTestingModule,
         // AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ],
       declarations: [
