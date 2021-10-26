@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { KitchenComponent } from './kitchen.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environment';
+import { CdkDropList } from '@angular/cdk/drag-drop';
 
 describe('KitchenComponent', () => {
   let component: KitchenComponent;
@@ -8,7 +11,10 @@ describe('KitchenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KitchenComponent ]
+      imports: [
+        AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
+      ],
+      declarations: [ KitchenComponent, CdkDropList  ]
     })
     .compileComponents();
   });

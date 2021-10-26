@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'burger-queen';
+  title = 'burger-queen';
 
   // items: Observable<any[]>;
   // constructor(firestore: AngularFirestore) {
