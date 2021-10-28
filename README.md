@@ -324,47 +324,53 @@ rápidamente a los clientes que las hicieron.
 ##### Prototipos de Baja Fidelidad:
 
 * Vista Home
-![home](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/Home.png)
+![home](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/Home.png)
 
 * Vista Cocina
-![kitchen](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/Cocina.png)
+![kitchen](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/Cocina.png)
 
 * Vista Mesas
-![booking](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/Mesero.png)
+![booking](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/Mesero.png)
 
 * Vista Menú
-![menu](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/MeseroII.png)
+![menu](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/MeseroII.png)
 
 ##### Prototipos de Alta Fidelidad:
 
 * Vista Home
-![home](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/PA-Home.png)
+![home](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/PA-Home.png)
 
 * Vista Mesas
-![booking](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/PA-Reserva.png)
+![booking](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/PA-Reserva.png)
 
 * Vista Menu
-![menu](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/PA-Carta.png)
+![menu](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/PA-Carta.png)
 
 * Vista Cocina
-![kitchen](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/PA-Cocina.png)
+![kitchen](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/PA-Cocina.png)
 
 * Vista Órdenes
-![orders](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/PA-Ordenes.png)
+![orders](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/PA-Ordenes.png)
 
 ##### Producto Final:
 
 * Vista Home
-![home](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/pantalla_home.png)
+![home](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/pantalla_home.png)
 
 * Vista Mesas
-![booking](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/pantalla_booking.png)
+![booking](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/pantalla_booking.png)
 
 * Vista Menu
-![menu](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/pantalla_menu.png)
+![menu](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/pantalla_menu.png)
 
 * Vista Cocina
-![kitchen](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/pantalla_kitchen.png)
+![kitchen](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/pantalla_kitchen.png)
 
 * Vista Órdenes
-![orders](https://raw.githubusercontent.com/BitzyG/LIM015-burger-queen/main/src/assets/readme/pantalla_orders.png)
+![orders](https://raw.githubusercontent.com/sgcm14/LIM015-burger-queen/main/src/assets/readme/pantalla_orders.png)
+
+**Realizado por :** 
+
+Sammy Gigi Cantoral Montejo (sgcm14)
+
+<img src ="https://raw.githubusercontent.com/sgcm14/sgcm14/main/sammy.jpg" width="200">
