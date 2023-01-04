@@ -9,11 +9,11 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-   //variables globales
+  //variables globales
   products: any[] = [];
   productsFilter: any[] = []; // trae los productos filtrados para mostrar
-  menuType: string =  'desayuno';
-  selectedTable:any;
+  menuType: string = 'desayuno';
+  selectedTable: any;
   itemsCart = this.cartService.getItems(); //trae los productos del carrito
   username: string = '';
 
@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     //se inicializan valores
     this.getProducts();
-     console.log(this.itemsCart); //el tímido
+    console.log(this.itemsCart); //el tímido
     this.shareData.sharedMessage.subscribe(message => this.selectedTable = message) // trae la data message del servicio
   }
 
@@ -38,7 +38,7 @@ export class MenuComponent implements OnInit {
   getProducts() {
     this.service.getProducts().subscribe((data: any[]) => {
       this.products = [];
-      data.forEach((element:any) => {
+      data.forEach((element: any) => {
         this.products.push({
           id: element.payload.doc.id,
           ...element.payload.doc.data(),
@@ -50,14 +50,14 @@ export class MenuComponent implements OnInit {
 
   // Trae elementos del menú que coinciden con tipo Desayuno
   getBreakfastItem() {
-    if (this.menuType==='desayuno'){
+    if (this.menuType === 'desayuno') {
       return this.products.filter((item) => item.tipo == 'desayuno');
     }
     else return this.products.filter((item) => item.tipo == 'menu');
   }
 
   // cambia estado de menu a mostrar(cambio de estado)
-  changeTypeMenu(type: string){
+  changeTypeMenu(type: string) {
     this.menuType = type;
     this.productsFilter = this.getBreakfastItem();
   }
@@ -84,8 +84,8 @@ export class MenuComponent implements OnInit {
   // Limpia el status de la mesa si vuelve a booking
   clearTable() {
     const idTable = this.selectedTable.id;
-    const objTable = {status:false};
-    this.service.updateTable(idTable,objTable);
+    const objTable = { status: false };
+    this.service.updateTable(idTable, objTable);
     // console.log(this.selectedTable);
   }
 
