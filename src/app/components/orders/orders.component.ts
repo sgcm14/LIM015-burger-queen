@@ -9,7 +9,7 @@ import { BurgerQueenDBService } from 'src/app/services/burger-queen-db.service';
 })
 export class OrdersComponent implements OnInit {
   time: any = Date.now();
-  order:any[] = [];
+  order: any[] = [];
   orderName: any;
   orderQuantity: any;
   orderId: any;
@@ -31,7 +31,7 @@ export class OrdersComponent implements OnInit {
   getOrderKitchen() {
     this.service.getOrderKitchen().subscribe(data => {
       this.order = [];
-      data.forEach((element:any) => {
+      data.forEach((element: any) => {
         this.order = [...this.order, {
           id: element.payload.doc.id,
           ...element.payload.doc.data(),
@@ -61,33 +61,33 @@ export class OrdersComponent implements OnInit {
     } else {
       // detecta cambio de columna al hacer el drop
       transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
 
-            // variables reasignadas
-      this.orderId= event.container.data[event.currentIndex].id;
+      // variables reasignadas
+      this.orderId = event.container.data[event.currentIndex].id;
       this.tableID = event.container.data[event.currentIndex].mesaID
       this.getOrderDone();
 
       // Limpia el status de la mesa si vuelve a booking
       const clearTable = () => {
         const idTable = this.tableID;
-        const objTable = {status:false};
-        this.service.updateTable(idTable,objTable);
+        const objTable = { status: false };
+        this.service.updateTable(idTable, objTable);
         // console.log(this.selectedTable);
       }
       // Actualiza el estado del pedido con el drop de 1 a 2
       if (this.orderStatus === 1) {
-        const objOrder = {status:2};
-        this.service.updateStatusOrder(this.orderId,objOrder);
+        const objOrder = { status: 2 };
+        this.service.updateStatusOrder(this.orderId, objOrder);
         clearTable();
       }
 
       // Actualiza el estado del pedido con el drop de 2 a 1
       if (this.orderStatus === 2) {
-        const objOrder = {status:1};
-        this.service.updateStatusOrder(this.orderId,objOrder);
+        const objOrder = { status: 1 };
+        this.service.updateStatusOrder(this.orderId, objOrder);
       }
     }
   }
