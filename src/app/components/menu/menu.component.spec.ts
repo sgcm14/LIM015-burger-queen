@@ -13,9 +13,9 @@ describe('MenuComponent', () => {
       imports: [
         AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ],
-      declarations: [ MenuComponent ]
+      declarations: [MenuComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
