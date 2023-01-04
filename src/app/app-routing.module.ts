@@ -7,13 +7,13 @@ import { MenuComponent } from './components/menu/menu.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
 const routes: Routes = [
-  {path : '', redirectTo: 'home', pathMatch: 'full'},
-  {path : 'home', component: HomeBodyComponent},
-  {path : 'booking', component: BookingComponent},
-  {path : 'menu', component: MenuComponent},
-  {path : 'kitchen', component: KitchenComponent},
-  {path : 'orders', component: OrdersComponent},
-  {path : '**', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeBodyComponent },
+  { path: 'booking', component: BookingComponent },
+  { path: 'menu', component: MenuComponent },
+  { path: 'kitchen', component: KitchenComponent },
+  { path: 'orders', component: OrdersComponent },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
