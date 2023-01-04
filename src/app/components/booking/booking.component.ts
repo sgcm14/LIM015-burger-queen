@@ -18,7 +18,7 @@ export class BookingComponent implements OnInit {
   getTables() {
     this.service.getTables().subscribe(data => {
       this.tables = [];
-      data.forEach((element:any) => { // Se puede usar map para recorrer
+      data.forEach((element: any) => { // Se puede usar map para recorrer
         // console.log(element.payload.doc.id); // trae colección por ID
         // console.log(element.payload.doc.data()); // trae la colección con contenido
         this.tables.push({
