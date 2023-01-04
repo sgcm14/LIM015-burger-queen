@@ -3,10 +3,12 @@
 <section class="container">
   <section class="row mx-auto">
     <div class="col-sm mt-2">
-      <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block" (click)="changeTypeMenu('desayuno')">Desayuno</button>
+      <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block"
+        (click)="changeTypeMenu('desayuno')">Desayuno</button>
     </div>
     <div class="col-sm mt-2">
-      <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block" (click)="changeTypeMenu('menu')">Menú</button>
+      <button type="button" class="btnMenu btnColor btn btn-lg fs-2 col-6  mx-auto d-block"
+        (click)="changeTypeMenu('menu')">Menú</button>
     </div>
     <div class="col-sm mt-2">
       <p class="text-center fs-1">{{selectedTable.name}}</p>
@@ -36,7 +38,8 @@
       <input type="text" placeholder="Cliente: _______________________" class="form-control" [(ngModel)]="username" />
     </div>
     <div class="col">
-      <button type="button" class="btnMenu btn-lg btn col-6 mx-auto d-block mt-3" (click)="makeOrder()" routerLink="/orders">Ordenar</button>
+      <button type="button" class="btnMenu btn-lg btn col-6 mx-auto d-block mt-3" (click)="makeOrder()"
+        routerLink="/orders">Ordenar</button>
     </div>
   </section>
 </section>
