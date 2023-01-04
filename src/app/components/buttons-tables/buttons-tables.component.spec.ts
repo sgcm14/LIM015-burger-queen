@@ -13,9 +13,9 @@ describe('ButtonsTablesComponent', () => {
       imports: [
         AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ],
-      declarations: [ ButtonsTablesComponent ]
+      declarations: [ButtonsTablesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
