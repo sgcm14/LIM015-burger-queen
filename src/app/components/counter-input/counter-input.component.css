@@ -1,14 +1,17 @@
-.itemsIcons{
+.itemsIcons {
     background-color: transparent;
     border: 1px solid transparent;
 }
-.rotate{
+
+.rotate {
     transform: rotate(-45deg);
 }
-p{
+
+p {
     margin: 0px;
 }
-.containerProduct{
+
+.containerProduct {
     display: flex;
     justify-content: space-between;
 }
