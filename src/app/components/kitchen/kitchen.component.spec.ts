@@ -14,9 +14,9 @@ describe('KitchenComponent', () => {
       imports: [
         AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ],
-      declarations: [ KitchenComponent, CdkDropList  ]
+      declarations: [KitchenComponent, CdkDropList]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
