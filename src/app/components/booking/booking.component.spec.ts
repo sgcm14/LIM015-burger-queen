@@ -14,9 +14,9 @@ describe('BookingComponent', () => {
       imports: [
         AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ],
-      declarations: [ BookingComponent ]
+      declarations: [BookingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
