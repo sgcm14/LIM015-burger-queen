@@ -17,9 +17,9 @@ describe('OrdersComponent', () => {
       imports: [
         AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ],
-      declarations: [ OrdersComponent, CdkDropList ]
+      declarations: [OrdersComponent, CdkDropList]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
