@@ -11,7 +11,7 @@ import { interval, timer } from 'rxjs';
 })
 export class KitchenComponent implements OnInit {
   // Información de las Órdenes
-  order:any[] = [];
+  order: any[] = [];
   orderName: any;
   orderQuantity: any;
   orderId: any;
@@ -42,7 +42,7 @@ export class KitchenComponent implements OnInit {
   getOrderKitchen() {
     this.service.getOrderKitchen().subscribe(data => {
       this.order = [];
-      data.forEach((element:any) => {
+      data.forEach((element: any) => {
         this.order = [...this.order, {
           id: element.payload.doc.id,
           ...element.payload.doc.data(),
@@ -72,41 +72,41 @@ export class KitchenComponent implements OnInit {
     } else {
       // detecta cambio de columna al hacer el drop
       transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
 
       // variables reasignadas
-      this.orderId= event.container.data[event.currentIndex].id;
+      this.orderId = event.container.data[event.currentIndex].id;
       this.orderDate = event.container.data[event.currentIndex].fecha;
 
       // Tiempo de preparación
       const getTimePreparation = () => {
-      const finalDate = new Date();
-      this.dateFb = Date.parse(this.orderDate); // VIENE DE FB
-      this.dateFbParsed = new Date(this.dateFb); // COVIERTE FECHA DE FB(string) A FECHA(date)
+        const finalDate = new Date();
+        this.dateFb = Date.parse(this.orderDate); // VIENE DE FB
+        this.dateFbParsed = new Date(this.dateFb); // COVIERTE FECHA DE FB(string) A FECHA(date)
 
-      const difference = finalDate.getTime() - this.dateFbParsed.getTime(); //calcular la direncia entre la finalizacion del pedido y la hora de inicio
-      // const days = Math.floor(difference / 86400000); // conversion de milisegundos a días
-      const hours = Math.floor((difference % 86400000) / 3600000); // conversión de milisegundos a hora
-      const minutes = Math.round(((difference % 86400000) % 3600000) / 60000); // calcular minutos
+        const difference = finalDate.getTime() - this.dateFbParsed.getTime(); //calcular la direncia entre la finalizacion del pedido y la hora de inicio
+        // const days = Math.floor(difference / 86400000); // conversion de milisegundos a días
+        const hours = Math.floor((difference % 86400000) / 3600000); // conversión de milisegundos a hora
+        const minutes = Math.round(((difference % 86400000) % 3600000) / 60000); // calcular minutos
 
-      this.preparationTime = ` ${hours} hs  ${minutes} min `; // tiempo total de preparación
-      return this.preparationTime;
+        this.preparationTime = ` ${hours} hs  ${minutes} min `; // tiempo total de preparación
+        return this.preparationTime;
       }
 
       // Actualiza el estado del pedido con el drop de 0 a 1
       this.getOrderDone();
       if (this.orderStatus === 0) {
-        const objOrder = {status:1};
-        this.service.updateStatusOrder(this.orderId,objOrder);
-        this.preparationOrder = {tiempo: getTimePreparation()}
+        const objOrder = { status: 1 };
+        this.service.updateStatusOrder(this.orderId, objOrder);
+        this.preparationOrder = { tiempo: getTimePreparation() }
         this.service.updatePreparationTime(this.orderId, this.preparationOrder);
       }
       // Actualiza el estado del pedido con el drop de 1 a 0
       if (this.orderStatus === 1) {
-        const objOrder = {status:0};
-        this.service.updateStatusOrder(this.orderId,objOrder);
+        const objOrder = { status: 0 };
+        this.service.updateStatusOrder(this.orderId, objOrder);
       }
 
     }
