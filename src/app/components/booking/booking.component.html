@@ -3,13 +3,19 @@
 
 <section class="container">
   <section class="row">
-    <div class="col text-center" *ngFor="let table of tables | slice:0:3;"> <!-- Slice limita la cantidad de resultados -->
+    <div class="col text-center" *ngFor="let table of tables | slice:0:3;">
+      <!-- Slice limita la cantidad de resultados -->
+
       <app-buttons-tables [table]="table"></app-buttons-tables>
+
     </div>
   </section>
   <section class="row">
-    <div class="col text-center" *ngFor="let table of tables | slice:3;"> <!-- Slice limita la cantidad de resultados -->
-      <app-buttons-tables [table]="table"></app-buttons-tables>
+    <div class="col text-center" *ngFor="let table of tables | slice:3;">
+      <!-- Slice limita la cantidad de resultados -->
+      <span *ngIf="table" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+        <app-buttons-tables [table]="table"></app-buttons-tables>
+      </span>
     </div>
   </section>
 
@@ -20,7 +26,7 @@
       </button>
     </div>
     <div class="col"></div>
-      <!-- <button type="button" class="btnBooking btn col-6 mx-auto d-block mt-3" routerLink="/menu">Ver Carta</button> -->
+    <!-- <button type="button" class="btnBooking btn col-6 mx-auto d-block mt-3" routerLink="/menu">Ver Carta</button> -->
   </section>
 </section>
 
