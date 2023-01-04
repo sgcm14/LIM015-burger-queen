@@ -1,4 +1,4 @@
-.container{
+.container {
     margin-top: 5vh;
     margin-bottom: 5rem;
 }
@@ -11,55 +11,61 @@ p {
 }
 
 /*botones*/
-.btnMenu{
+.btnMenu {
     color: var(--color-white);
     font-family: var(--font-main);
     background-color: var(--color-orange);
     font-weight: 500;
     font-size: 24px;
 }
-.btnColor{
+
+.btnColor {
     /* background-color: #FA4036 !important; */
     background-color: var(--color-red) !important;
     min-width: 150px;
 }
 
-.btn:focus{
+.btn:focus {
     box-shadow: none;
 }
 
-.tableMenu{
+.tableMenu {
     background-color: #8a02007c;
     border: 10px solid var(--color-red) !important;
 }
-.tableOrder{
+
+.tableOrder {
     background-color: #fe95257c;
     border: 10px solid var(--color-orange) !important;
 }
-li{
+
+li {
     background-color: #FFFFFF;
 }
 
 /*+*/
-.itemsIcons{
+.itemsIcons {
     background-color: transparent;
     border: 1px solid transparent;
 }
 
 /*x*/
-.rotate{
+.rotate {
     transform: rotate(-45deg);
 }
 
-.containerBotton{
+.containerBotton {
     align-items: flex-end;
 }
-.fa-reply{
+
+.fa-reply {
     color: var(--color-white);
 }
-.fa-reply:hover{
+
+.fa-reply:hover {
     color: rgb(194, 194, 194);
 }
-.form-control:focus{
+
+.form-control:focus {
     box-shadow: 0 0 0 0.25rem rgb(237 148 33 / 75%);
 }
