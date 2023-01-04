@@ -1,18 +1,19 @@
-.container{
+.container {
   margin-top: 10vh;
   margin-bottom: 5rem;
 }
 
-.btnTable{
+.btnTable {
   background-color: #26221D;
 }
+
 /*Mesas img*/
-.imgTable{
+.imgTable {
   height: 15vh;
 }
 
 /*botones*/
-.btnBooking{
+.btnBooking {
   color: var(--color-white);
   font-family: var(--font-main);
   background-color: var(--color-orange);
@@ -21,16 +22,18 @@
 }
 
 /*Mesas btns*/
-.btns{
+.btns {
   width: 100% !important;
 }
 
-.fa-reply{
+.fa-reply {
   color: var(--color-white);
 }
-.fa-reply:hover{
+
+.fa-reply:hover {
   color: rgb(194, 194, 194);
 }
-.btn:focus{
+
+.btn:focus {
   box-shadow: none;
 }
