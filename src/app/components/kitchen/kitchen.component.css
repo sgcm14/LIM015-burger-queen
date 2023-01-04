@@ -1,46 +1,50 @@
-.container{
+.container {
   margin-top: 3vh;
 }
 
 /*pendiente, listo*/
-.title{
+.title {
   font-weight: 500;
   padding: 0;
   color: #df2218;
   font-family: var(--font-main);
 }
-.titleGreen{
+
+.titleGreen {
   color: #1CA10D;
 }
 
-p{
+p {
   margin-bottom: 0;
   margin: 0 0.5rem;
 }
 
-span{
+span {
   width: 10%;
 }
-.spanRed{
+
+.spanRed {
   border: 2px solid #8a02007c !important;
 }
-.spanGreen{
+
+.spanGreen {
   border: 2px solid #1CA10D !important;
 }
 
-li{
+li {
   user-select: none;
 }
 
-.timer{
+.timer {
   color: var(--color-white);
   font-family: var(--font-main);
 }
 
-.btn:focus{
+.btn:focus {
   box-shadow: none;
 }
-.btn{
+
+.btn {
   font-family: var(--font-main);
   color: var(--color-white);
   font-weight: 500;
@@ -53,7 +57,7 @@ li{
   background-color: var(--color-orange);
   font-size: 24px;
 } */
-.btn:focus{
+.btn:focus {
   box-shadow: none;
 }
 
@@ -64,12 +68,13 @@ li{
   background-color: #FA4036;
 } */
 
-.tablePending{
+.tablePending {
   background-color: #8a02007c;
   border: 10px solid var(--color-red) !important;
   cursor: move;
 }
-.tableReady{
+
+.tableReady {
   background-color: #106a068a;
   border: 10px solid #1CA10D !important;
   cursor: move;
