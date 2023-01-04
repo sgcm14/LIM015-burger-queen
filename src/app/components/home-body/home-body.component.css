@@ -1,4 +1,4 @@
-.container{
+.container {
   margin-top: 5vh;
   margin-bottom: 5rem;
 }
@@ -22,20 +22,23 @@ p {
 }
 
 /*botones*/
-.btnIcon{
+.btnIcon {
   background-color: #26221D;
 }
-.btnHome{
+
+.btnHome {
   color: var(--color-white);
   font-family: var(--font-main);
   background-color: var(--color-orange);
   font-weight: 500;
   font-size: 24px;
 }
-.btnOrder{
+
+.btnOrder {
   background-color: var(--color-red);
 }
 
-.btn-check:focus+.btn, .btn:focus{
+.btn-check:focus+.btn,
+.btn:focus {
   box-shadow: 0 0 0 0.25rem #ffbf006b;
 }
