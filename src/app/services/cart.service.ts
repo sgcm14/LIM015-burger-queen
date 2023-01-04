@@ -20,16 +20,16 @@ export class CartService {
   // actualiza contenido del carrito
   updateCart(product: any, operator: string) {
     for (let j = 0; j < this.itemsCart.length; j++) {
-      if(this.itemsCart[j].id === product.id) {
-        switch(operator) {
+      if (this.itemsCart[j].id === product.id) {
+        switch (operator) {
           case '+':
             this.itemsCart[j].cantidad++;
-            this.itemsCart[j].total =  this.itemsCart[j].total + product.precio;
-          break;
+            this.itemsCart[j].total = this.itemsCart[j].total + product.precio;
+            break;
           case '-':
             this.itemsCart[j].cantidad--;
-            this.itemsCart[j].total =  this.itemsCart[j].total - product.precio;
-          break;
+            this.itemsCart[j].total = this.itemsCart[j].total - product.precio;
+            break;
         }
         break;
       }
@@ -39,16 +39,16 @@ export class CartService {
   // elimina contenido del carrito
   deleteItem(product: any) {
     const index = this.itemsCart.indexOf(product);
-    if(index !== -1) {
-      this.itemsCart.splice(index,1);
+    if (index !== -1) {
+      this.itemsCart.splice(index, 1);
     }
   }
 
   //Calcula el total de totales
   getTotal() {
     let total = 0;
-    this.itemsCart.forEach( item => {
-        total = total + item.total;
+    this.itemsCart.forEach(item => {
+      total = total + item.total;
     });
     return total;
   }
