@@ -1,14 +1,19 @@
-<button type="button" class="btnTable" *ngIf="table" (click)="table.status=!table.status; updateStatusTable(); sendSelectedTable()" routerLink="/menu">
+<button type="button" class="btnTable" *ngIf="table"
+  (click)="table.status=!table.status; updateStatusTable(); sendSelectedTable()" routerLink="/menu">
   <!--Mesa desocupada-->
-  <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="!table.status">
-  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns" *ngIf="!table.status"> {{ table.name }}</p>
+  <div class="d-inline-block" tabindex="0" data-toggle="tooltip" title="¡Se puede reservar!" *ngIf="!table.status">
+    <img src="../../../assets/mesa_on.png" alt="" class="imgTable mx-auto d-block mt-3">
+    <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns"> {{ table.name }}</p>
+  </div>
   <!--Mesa ocupada-->
-  <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3" *ngIf="table.status">
-  <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns btnRed" *ngIf="table.status"> {{ table.name }}</p>
+  <div class="d-inline-block" tabindex="0" data-toggle="tooltip" title="¡Están esperando su orden!"
+    *ngIf="table.status">
+    <img src="../../../assets/mesa_off.png" alt="" class="imgTable mx-auto d-block mt-3">
+    <p class="rounded-pill text-center mt-3 fs-3 btnTitle btns btnRed"> {{ table.name }}</p>
+  </div>
 </button>
 <!-- message contiene el nro de la mesa y lo envía
   <div>
     <h1>Message from Service : {{message}}</h1>
   </div>
 -->
-
