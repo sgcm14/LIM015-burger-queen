@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   height: 15vh;
   background-color: var(--color-red);
   color: var(--color-white);
@@ -7,40 +7,46 @@
   padding-bottom: 0;
 }
 
-.navbar-brand{
+.navbar-brand {
   padding-top: 0;
   padding-bottom: 0;
 }
-.logo{
+
+.logo {
   height: 15vh;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
   box-shadow: none;
 }
 
 /*barras menú*/
-.fa-bars{
+.fa-bars {
   color: var(--color-orange);
   font-size: 30px;
 }
 
-.navbar-nav{
+.navbar-nav {
   align-items: center;
   background-color: var(--color-red);
 }
+
 a {
   color: white;
   font-family: var(--font-main);
   color: var(--color-orange);
   margin-right: 1rem;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   color: #bb6100;
 }
-.nav-link:focus, .nav-link:hover {
+
+.nav-link:focus,
+.nav-link:hover {
   color: var(--color-white);
 }
-.navbar-expand-lg .navbar-collapse{
+
+.navbar-expand-lg .navbar-collapse {
   justify-content: flex-end;
 }
